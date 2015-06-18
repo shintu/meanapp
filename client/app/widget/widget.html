@@ -1,0 +1,45 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<aside class="aside ng-scope">
+<div ng-include="'components/navbar/sidenav.html'"></div>
+</aside>
+<section>
+     <div class="content-wrapper">
+      <h3 class="ng-scope">Widget
+   <small>Get the JS widget</small>
+</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      Copy paste the following script into your website index page (index.html):
+
+      <p>
+        <pre>
+&lt;script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"&gt;&lt;/script&gt;<br />
+&lt;script src="//js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript"&gt;&lt;/script&gt;<br />
+&lt;script&gt;<br />
+    (function (window, document, geoip2) {<br />
+          var s = document.createElement('script');<br />
+          // sample JS snippets located on my Dropbox<br />
+          s.src = 'https://dl.dropboxusercontent.com/u/5877351/redjester.js';<br />
+          s.type = 'text/javascript';<br />
+          s.async = true;<br />
+          document.body.appendChild(s);<br />
+          window.redjesterClientId='{{clientId}}'
+    })(window, document, geoip2);<br />
+&lt;/script&gt;
+      </pre>
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>Angular Fullstack v2.0.13 |
+      <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+      <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a>
+    </p>
+  </div>
+</footer>
+</section>

@@ -1,0 +1,54 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<aside class="aside ng-scope">
+<div ng-include="'components/navbar/sidenav.html'"></div>
+</aside>
+<section>
+    <div class="content-wrapper">
+      <h3 class="ng-scope">Stripe Payment
+   <small>Standard and custom elements for any form</small>
+</h3>
+        <div class="row ng-scope">
+          <div class="col-sm-6" >
+             <!-- START panel-->
+             <div class="panel panel-default">
+                <div class="panel-heading stripe_error" style="display:none"></div>
+                <div class="panel-body">
+                   <form stripe-form="handleStripe" class="ng-pristine ng-valid" name="myForm">
+                       <div class="span3 form-group">
+                          <label for="">Amount</label>
+                          <input type="text" id="stripeamount" class="input-block-level form-control" />
+                        </div>
+                        <div class="span3 form-group">
+                          <label for="">Card number</label>
+                          <input type="text" class="input-block-level form-control" ng-model="number" payments-validate="card" payments-format="card" payments-type-model="type" ng-class="myForm.number.$card.type"/>
+                        </div>
+                        
+                        <div class="span1 form-group">
+                          <label for="">Expiry</label>
+                          <input type="text" class="input-block-level form-control" ng-model="expiry" payments-validate="expiry" payments-format="expiry" />
+                        </div>
+                        
+                        <div class="span3 form-group">
+                          <label for="">Name on card </label>
+                          <input type="text" class="input-block-level form-control">
+                        </div>
+                        
+                        <div class="span1 form-group">
+                          <label for="">CVC</label>
+                          <input type="text" class="input-block-level form-control" ng-model="cvc" payments-validate="cvc" payments-format="cvc" payments-type-model="type"/>
+                        </div>
+                        
+                        <div class="span4 form-group">
+                          <button type="submit" class="btn btn-primary btn-large">Submit</button>
+                        </div>
+            </form>
+                </div>
+             </div>
+             <!-- END panel-->
+          </div>
+        
+</div>
+        </div>  
+
+</section>
+

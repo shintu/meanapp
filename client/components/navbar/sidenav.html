@@ -1,0 +1,39 @@
+<!-- START Sidebar (left)-->
+<div class="aside-inner">
+   <nav sidebar="" class="sidebar" ng-controller="NavbarCtrl">
+      <!-- START sidebar nav-->
+      
+      <ul class="nav ng-scope">
+        <li class="ng-scope nav-heading"  >
+<span class="ng-scope ng-binding" translate="sidebar.heading.HEADER" >Navegacion principal</span>
+</li>
+        <li   class="ng-scope">
+   <!-- ngIf: item.heading --><!-- ngIf: !item.heading --><a title="Home" class="ng-scope" ng-href="/" href="/"><em class="fa fa-home" ng-hide="inSubmenu"></em><!-- ngIf: item.alert --><!-- end ngIf: item.alert --><span translate="sidebar.nav.WIDGETS" class="ng-scope ng-binding">Home</span></a><!-- end ngIf: !item.heading --><!-- ngIf: item.submenu -->
+</li>
+         <li class="ng-scope">
+   <!-- ngIf: item.heading --><!-- ngIf: !item.heading --><a ng-href="/insight" href="/insight" title="Widgets" class="ng-scope" ><em class="icon-speedometer" ng-hide="inSubmenu"></em><!-- ngIf: item.alert --><!-- end ngIf: item.alert --><span translate="sidebar.nav.WIDGETS" class="ng-scope ng-binding">Insight</span></a><!-- end ngIf: !item.heading --><!-- ngIf: item.submenu -->
+</li>
+           <li   class="ng-scope">
+   <!-- ngIf: item.heading --><!-- ngIf: !item.heading --><a ng-href="/widget" title="Widgets" class="ng-scope"><em class="icon-grid" ng-hide="inSubmenu"></em><!-- ngIf: item.alert --><!-- end ngIf: item.alert --><span translate="sidebar.nav.WIDGETS" class="ng-scope ng-binding">Widgets</span></a><!-- end ngIf: !item.heading --><!-- ngIf: item.submenu -->
+</li>
+ <li class="ng-scope" ng-class="{active: isActive('/admin')}" ng-show="isAdmin()">
+   <!-- ngIf: item.heading --><!-- ngIf: !item.heading -->
+<a href="/admin"><em class="icon-graph" ng-hide="inSubmenu"></em><!-- ngIf: item.alert --><!-- end ngIf: item.alert --><span translate="sidebar.nav.WIDGETS" class="ng-scope ng-binding">Admin</span></a><!-- end ngIf: !item.heading --><!-- ngIf: item.submenu -->
+</li>
+  <li class="ng-scope" ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}">
+   <!-- ngIf: item.heading --><!-- ngIf: !item.heading -->
+<a href="/login"><em  class="fa fa-sign-out" ng-hide="inSubmenu"></em><!-- ngIf: item.alert --><!-- end ngIf: item.alert --><span translate="sidebar.nav.WIDGETS" class="ng-scope ng-binding">Login</span></a><!-- end ngIf: !item.heading --><!-- ngIf: item.submenu -->
+</li>
+ <li class="ng-scope" ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}">
+   <!-- ngIf: item.heading --><!-- ngIf: !item.heading -->
+<a href=""><em  class="fa fa-sign-out"> </em><!-- ngIf: item.alert --><!-- end ngIf: item.alert --><span translate="sidebar.nav.WIDGETS" class="ng-scope ng-binding" ng-click="logout()">Logout</span></a><!-- end ngIf: !item.heading --><!-- ngIf: item.submenu -->
+</li>
+   <li class="ng-scope">
+   <a ng-href="/payment" title="Payment" class="ng-scope"  ><em class="fa fa-globe" ng-hide="inSubmenu"></em><span translate="sidebar.nav.WIDGETS" class="ng-scope ng-binding">payment</span></a><!-- end ngIf: !item.heading --><!-- ngIf: item.submenu -->
+</li>
+
+      </ul>
+      <!-- END sidebar nav-->
+   </nav>
+</div>
+<!-- END Sidebar (left)-->
